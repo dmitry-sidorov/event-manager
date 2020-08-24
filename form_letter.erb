@@ -19,7 +19,7 @@
       <% legislators.each do |legislator| %>
         <tr>
           <td><%= "#{legislator.name}" %></td>
-          <td><%= "#{legislator.urls.join}" unless legislator.url.nil? %></td>
+          <td><%= "#{legislator.urls.join}" unless legislator.urls.nil? %></td>
         </tr>
       <% end %>
     <% else %>
@@ -27,5 +27,10 @@
       <td><%= "#{legislators}" %></td>
     <% end %>
   </table>
+
+  <p>
+    <% unless phone_number.nil? %>Your phone number is: <%= phone_number %>
+    <% else %> You have not provided your phone number!<% end %>
+  </p>
 </body>
 </html>
